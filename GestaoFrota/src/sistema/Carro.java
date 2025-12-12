@@ -22,7 +22,7 @@ public class Carro extends Veiculo{
 
     @Override
     public String toString() {
-        return String.format("Placa: %s, Modelo: %s, Valor diária: %.2f, Capacidade de Passageiros: %d", placa, modelo, valorDiaria, passageiros);
+        return String.format("( CARRO ) Placa: %s, Modelo: %s, Valor diária: %.2f, Capacidade de Passageiros: %d", placa, modelo, valorDiaria, passageiros);
     }
 
     //getters e setters:
