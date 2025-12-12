@@ -38,4 +38,9 @@ public class Caminhao extends Veiculo{
         this.eixos = eixos;
         return this;
     }
+
+    @Override
+    public String toString(){
+        return String.format("( CAMINHÃO ) Placa: %s, Modelo: %s, Valor diária: %.2f, Capacidade de Carga: %.2f, Eixos: %d", placa, modelo, valorDiaria, capacidadeCarga, eixos);
+    }
 }
