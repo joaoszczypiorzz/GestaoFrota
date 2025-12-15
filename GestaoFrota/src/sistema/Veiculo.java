@@ -19,7 +19,7 @@ public abstract class  Veiculo implements Locavel{
 
     @Override
     public void alugar(int dias) {
-        System.out.println("Mensagem de confirmação do aluguel do carro: "+ modelo +" Por " + dias +" dias" +" \nValor do aluguel: " + calcularAluguel(dias));
+        System.out.println("Mensagem de confirmação do aluguel do Veiculo: "+ modelo +" Por " + dias +" dias" +" \nValor do aluguel: " + calcularAluguel(dias));
     }
 
     @Override
