@@ -32,14 +32,6 @@ public class Frota<T extends Veiculo> {
         }
     }
 
-    //Função para verificar se a placa digitada pelo meu usuário já existe:
-    public T verificarExiste(String placaNova){
-        return lista.stream()
-                .filter(n -> n.getPlaca().equalsIgnoreCase(placaNova))
-                .findFirst()
-                .orElse(null);
-    }
-
     public List<T> getVeiculos() {
         return lista;
     }
