@@ -28,3 +28,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar pasta de saída de compilação
+/out/
+
+# Ignora as configurações especificas de cada maquina para o Intellij
+.idea/
+*.iml
