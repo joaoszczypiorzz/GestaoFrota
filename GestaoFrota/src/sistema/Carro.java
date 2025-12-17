@@ -16,13 +16,17 @@ public class Carro extends Veiculo{
         if(percentual > 10){ //caso o percentual que for recebido do usuário for maior do que dez, sistema deve tratar como 10%
             percentual = 10;
         }
-        valorDiaria = valorDiaria - (valorDiaria * percentual/100); //reajustando valor da diaria
+        valorDiaria = valorDiaria + (valorDiaria * percentual/100); //reajustando valor da diaria
+        System.out.printf(
+                "Percentual de desconto aplicado (MAX 10%%): %.2f%%",
+                percentual
+        );
 
     }
 
     @Override
     public String toString() {
-        return String.format("( CARRO ) Placa: %s, Modelo: %s, Valor diária: %.2f, Capacidade de Passageiros: %d", placa, modelo, valorDiaria, passageiros);
+        return String.format("( CARRO ) Placa: %s, Modelo: %s, Valor diária: R$ %.2f , Capacidade de Passageiros: %d", placa, modelo, valorDiaria, passageiros);
     }
 
     //getters e setters:
