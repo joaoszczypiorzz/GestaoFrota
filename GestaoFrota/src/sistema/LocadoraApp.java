@@ -4,15 +4,7 @@ package sistema;
 import java.util.List;
 import java.util.Scanner;
 import java.util.*;
-/**
- * Fluxo de Execução (dentro de try-catch):
- * Manutenção de Preço: Peça uma placa de veículo para reajustar o valor da diária. Peça a porcentagem de aumento. Chame aplicarReajuste. Mostre o novo valor da diária e liste a frota para confirmar a alteração apenas naquele veículo.
- * Tratamento de Exceções:
- * Capture InputMismatchException (caso digitem letras onde deveriam ser números).
- * Capture IllegalArgumentException (caso a placa não exista).
- * Capture Exception genérica para erros imprevistos.
- * Finally: Feche o Scanner e agradeça a preferência.
- */
+
 public class LocadoraApp {
     public static void main(String[] args) {
 
@@ -60,6 +52,7 @@ public class LocadoraApp {
 
             System.out.println("Informe o Valor da Diária do Veiculo: ");
             double valorDiaria = sc.nextDouble();
+            sc.nextLine(); //puland Buffer
             if(valorDiaria < 0 ){  //Retorna erro caso valor da diára for menor do que zero
                 throw new ArithmeticException();
             }
@@ -106,6 +99,34 @@ public class LocadoraApp {
 
         }catch (IllegalArgumentException e){
             System.out.println(e.getMessage());
+        }
+
+        System.out.println("=== REAJUSTE DE PREÇO ===");
+        try{
+
+            System.out.println("Informe A placa do Veiculo que deseja Aplicar o Reajuste de preço: ");
+            String placaReajuste = sc.nextLine();
+            Veiculo findPlaca = veiculos.buscarPorPlaca(placaReajuste);
+            System.out.println("Informe o Percentual de Aumento que deseja aplicar: ");
+            double percentual = sc.nextDouble();
+            sc.nextLine(); //pulando Buffer
+            if(percentual < 0){
+                throw new Exception();
+            }
+            findPlaca.aplicarReajuste(percentual);
+            System.out.println("\nInformações do Veiculo Reajustado: " + findPlaca );
+
+
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("ERRO: Percentual deve ser maior que Zero!");
+        }finally {
+            System.out.println("=== LISTA FINAL DE VEICULOS ===");
+            veiculos.listarVeiculos();
+            System.out.println("OBRIGADO POR UTILIZAR MEU SISTEMA!");
+            System.out.println("SISTEMA ENCERRANDO...");
+            sc.close(); //fechado Scanner
         }
     }
 }

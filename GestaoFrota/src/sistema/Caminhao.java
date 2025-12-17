@@ -17,7 +17,8 @@ public class Caminhao extends Veiculo{
         if(percentual < 5){ //Reajuste minimo deve ser de 5%, caso o usuário digite um valor menor que 5%, sistema deve tratar como 5%
             percentual = 5;
         }
-        valorDiaria = valorDiaria - (valorDiaria * percentual/100); //reajustando valor
+        valorDiaria = valorDiaria + (valorDiaria * percentual/100); //reajustando valor
+        System.out.println("Percentual de desconto aplicado ( MAX 5% ): " + percentual);
     }
 
     //Getters e setters:
@@ -41,6 +42,6 @@ public class Caminhao extends Veiculo{
 
     @Override
     public String toString(){
-        return String.format("( CAMINHÃO ) Placa: %s, Modelo: %s, Valor diária: %.2f, Capacidade de Carga: %.2f, Eixos: %d", placa, modelo, valorDiaria, capacidadeCarga, eixos);
+        return String.format("( CAMINHÃO ) Placa: %s, Modelo: %s, Valor diária: R$ %.2f , Capacidade de Carga: %.2f kg, Eixos: %d", placa, modelo, valorDiaria, capacidadeCarga, eixos);
     }
 }
