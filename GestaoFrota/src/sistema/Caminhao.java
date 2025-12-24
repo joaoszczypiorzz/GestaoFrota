@@ -18,7 +18,7 @@ public class Caminhao extends Veiculo{
             percentual = 5;
         }
         valorDiaria = valorDiaria + (valorDiaria * percentual/100); //reajustando valor
-        System.out.println("Percentual de desconto aplicado ( MAX 5% ): " + percentual);
+        System.out.println("Percentual de Aumento aplicado ( MAX 5% ): " + percentual);
     }
 
     //Getters e setters:

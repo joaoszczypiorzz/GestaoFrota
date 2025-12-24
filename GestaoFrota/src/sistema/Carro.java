@@ -18,7 +18,7 @@ public class Carro extends Veiculo{
         }
         valorDiaria = valorDiaria + (valorDiaria * percentual/100); //reajustando valor da diaria
         System.out.printf(
-                "Percentual de desconto aplicado (MAX 10%%): %.2f%%",
+                "Percentual de Aumento aplicado (MAX 10%%): %.2f%%",
                 percentual
         );
 
