@@ -78,7 +78,7 @@ public class LocadoraApp {
             System.out.println("ERRO: Tipo de Veiculo digitado Inválido!");
         }catch (IllegalArgumentException e){
             System.out.println(e);
-            System.out.println("ERRO: Placa informada já cadastrada no sistema!");
+            System.out.println("ERRO: Placa informada já cadastrada no Catálogo!");
         }catch (ArithmeticException e){
             System.out.println("ERRO: Valor da Diária Deve ser maior que Zero!");
         }finally {
