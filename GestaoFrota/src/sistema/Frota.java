@@ -19,7 +19,7 @@ public class Frota<T extends Veiculo> {
         return lista.stream()
                 .filter(v -> v.getPlaca().equalsIgnoreCase(placa))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("ERRO:\nVeículo não encontrado: " + placa));
+                .orElseThrow(() -> new IllegalArgumentException("ERRO!\nVeículo não encontrado: " + placa));
     }
 
     public void listarVeiculos(){
