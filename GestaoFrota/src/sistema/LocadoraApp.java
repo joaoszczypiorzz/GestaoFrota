@@ -70,7 +70,7 @@ public class LocadoraApp {
                 System.out.println("Informe a quantidade de Eixos deste caminhão: ");
                 int qtdEixos = sc.nextInt();
                 sc.nextLine(); //pulando Buffer
-                veiculos.cadastrar(new Caminhao(novaPlaca,modelo,valorDiaria,capacidadeDeCarga,qtdEixos));
+                veiculos.cadastrar(new Caminhao(novaPlaca,modelo,valorDiaria,capacidadeDeCarga,qtdEixos)); //comentário para teste de commit
             }
 
         }catch (InputMismatchException e ){
